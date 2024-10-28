@@ -13,6 +13,7 @@
         header{
             background-color: #9f9;
             padding: 50px 10%;
+            display: flex;
         }
         main{
             
@@ -22,7 +23,7 @@
         }
         .feature{
             display:flex;
-
+            background-color: rgba(117, 117, 255, 0.877);
         }
         .left{
             width: 50%;
@@ -36,14 +37,70 @@
         .img1{
             width: 100%;
         }
+
+
+        /* те, що я змінив */
+
+
+        /* навігаційна панель */
+        .panel{
+            display: flex;
+            font-size: 25px;
+            margin-left: 200px;
+        }
+        .panel>a{
+            margin-left: 30px;
+            text-decoration: none;
+        }
+
+        /* краткий вміст курсу */
+        .courses{
+            padding-top: 100px;
+            display: flex;
+            justify-content: center;
+            color: white;
+            background-color: rgb(5, 5, 73);
+        }
+        .courses_text>ol>li{
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        /* нижня частина */
+        footer{
+            padding-top: 150px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        footer>h5{
+            color: white;
+        }
+        footer>div{
+            width: 100%;
+            text-align: center;
+        }
+
+        /* кнопка "Придбати" */
+        footer>div>button{
+            font-size: 30px;
+            width: 400px;
+            height: 100px;
+            border-radius: 60px;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>HTML Courses</h1>
+        <div class="panel">
+            <a href="#buy"><p>Придбати</p></a>
+            <a href="#home"><p>Головна</p></a>
+            <a href="#about_courses"><p>Про що курси</p></a>
+        </div>
     </header>
     <main>
-        <section class="features">
+        <section id="home" class="features">
             <div class="feature">
                 <div class="left">
                     <h2>Найкращі курси HTML у світі!</h2>
@@ -53,11 +110,21 @@
                 </div>
             </div>
         </section>
-        <section class="courses">
-
+        <section id="about_courses" class="courses">
+            <div class="courses_text">
+                <h2>Що в себе включають курси?</h2>
+                <ol>
+                    <li>Базові знання з HTML</li>
+                    <li>Навчитесь працювати з Git, GitHub</li>
+                    <li>Навчитесь робити лендінг сайти</li>
+                </ol>
+            </div>
         </section>
     </main>
     <footer>
+        <div>
+            <button id="buy">Придбати курс</button>
+        </div>
         <h5>Copyright © Vlad Ceresna, 2024</h5>
     </footer>
 </body>
